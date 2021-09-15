@@ -7,3 +7,18 @@ before_install:
 
 script:
   - docker run -e CI=true hoplite2000/docker-react npm run test
+
+# Deploy to AWS elastic beanstalk #
+#deploy:
+#  edge: true
+#  provider: elasticbeanstalk
+#  region: "us-west-2"
+#  app: "docker-react"
+#  env: "Docker-react-env"
+#  bucket_name: "elasticbeanstalk-us-west-2-309878938"
+#  bucket_path: "docker-react"
+#  on:
+#    branch: main
+# Set API keys from AWS to Travis CI environment variables #
+#  access_key_id: $AWS_ACCESS_KEY
+#  secret_access_key: $AWS_SECRET_KEY
